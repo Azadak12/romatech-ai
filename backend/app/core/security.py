@@ -47,4 +47,6 @@ def hash_refresh_token(raw_token: str) -> str:
 
 
 def refresh_token_expiry() -> datetime:
-    return datetime.now(timezone.utc) + timedelta(days=settings.REFRESH_TOKEN_EXPIRE_DAYS)
+    # Naive UTC — MySQL's DATETIME column has no timezone concept, so all
+    # stored timestamps are naive and treated as UTC by convention.
+    return datetime.utcnow() + timedelta(days=settings.REFRESH_TOKEN_EXPIRE_DAYS)

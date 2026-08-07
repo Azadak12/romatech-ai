@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
 
-    DATABASE_URL: str = 'postgresql+psycopg://romatech:romatech@localhost:5432/romatech'
+    DATABASE_URL: str = 'mysql+pymysql://romatech:romatech@localhost:3306/romatech'
 
     JWT_SECRET_KEY: str = 'change-me'
     JWT_ALGORITHM: str = 'HS256'

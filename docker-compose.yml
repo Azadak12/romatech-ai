@@ -1,20 +1,21 @@
 services:
   db:
-    image: postgres:16-alpine
+    image: mysql:8.0
     restart: unless-stopped
     environment:
-      POSTGRES_USER: romatech
-      POSTGRES_PASSWORD: romatech
-      POSTGRES_DB: romatech
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: romatech
+      MYSQL_PASSWORD: romatech
+      MYSQL_DATABASE: romatech
     ports:
-      - '5432:5432'
+      - '3306:3306'
     volumes:
-      - romatech_pgdata:/var/lib/postgresql/data
+      - romatech_mysqldata:/var/lib/mysql
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U romatech']
+      test: ['CMD', 'mysqladmin', 'ping', '-h', '127.0.0.1', '-uroot', '-prootpass']
       interval: 5s
       timeout: 5s
-      retries: 5
+      retries: 10
 
 volumes:
-  romatech_pgdata:
+  romatech_mysqldata:

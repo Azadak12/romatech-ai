@@ -2,16 +2,17 @@ import uuid
 from datetime import datetime
 
 from sqlalchemy import String, DateTime, Text, func
-from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.database import Base
+from app.core.types import GUID
 
 
 class Lead(Base):
     __tablename__ = 'leads'
+    __table_args__ = {'mysql_engine': 'InnoDB'}
 
-    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    id: Mapped[uuid.UUID] = mapped_column(GUID(), primary_key=True, default=uuid.uuid4)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     email: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
     phone: Mapped[str] = mapped_column(String(32), nullable=False)
@@ -19,4 +20,4 @@ class Lead(Base):
     plan_interest: Mapped[str] = mapped_column(String(32), nullable=True)
     message: Mapped[str] = mapped_column(Text, nullable=True)
     source: Mapped[str] = mapped_column(String(64), nullable=False, default='website')
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    created_at: Mapped[datetime] = mapped_column(DateTime(), server_default=func.now())

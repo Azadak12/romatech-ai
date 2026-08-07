@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime
 
 from fastapi import APIRouter, Depends, Request, Response, status
 from sqlalchemy.orm import Session
@@ -101,7 +101,7 @@ def refresh(request: Request, response: Response, db: Session = Depends(get_db))
     token_hash = hash_refresh_token(raw_token)
     stored = db.query(RefreshToken).filter(RefreshToken.token_hash == token_hash).first()
 
-    if not stored or stored.revoked or stored.expires_at < datetime.now(timezone.utc):
+    if not stored or stored.revoked or stored.expires_at < datetime.utcnow():
         raise unauthorized('Refresh token is invalid or expired')
 
     user = db.get(User, stored.user_id)
