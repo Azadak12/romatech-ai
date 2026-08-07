@@ -32,7 +32,7 @@ def _set_refresh_cookie(response: Response, raw_token: str) -> None:
         value=raw_token,
         httponly=True,
         secure=True,
-        samesite='lax',
+        samesite='none',
         path=REFRESH_COOKIE_PATH,
         max_age=60 * 60 * 24 * 7,
     )
