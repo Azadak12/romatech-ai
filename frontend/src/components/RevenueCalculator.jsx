@@ -20,7 +20,7 @@ function Slider({ id, label, value, onChange, min, max, step, prefix, suffix }) 
         <label htmlFor={id} className="text-sm font-medium text-slate-300">
           {label}
         </label>
-        <span className="text-lg font-semibold text-gold-500">
+        <span className="text-lg font-semibold text-ice-500">
           {prefix}
           {value.toLocaleString('en-US')}
           {suffix}
@@ -34,7 +34,7 @@ function Slider({ id, label, value, onChange, min, max, step, prefix, suffix }) 
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-navy-700 accent-gold-500"
+        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-navy-700 accent-ice-500"
       />
     </div>
   )
@@ -101,13 +101,13 @@ export default function RevenueCalculator() {
             />
           </div>
 
-          <div className="flex flex-col gap-4 rounded-2xl border border-gold-500/20 bg-navy-950/60 p-6 text-center sm:p-8">
+          <div className="flex flex-col gap-4 rounded-2xl border border-ice-500/20 bg-navy-950/60 p-6 text-center sm:p-8">
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-slate-400">
                 {outputLabels.monthly}
               </p>
               <p
-                className="mt-1 text-4xl font-bold tracking-tight text-gold-500 sm:text-5xl"
+                className="mt-1 text-4xl font-bold tracking-tight text-ice-500 sm:text-5xl"
                 aria-live="polite"
               >
                 {formatCurrency(animatedMonthly)}

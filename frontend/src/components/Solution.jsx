@@ -18,9 +18,9 @@ export default function Solution() {
               <Reveal
                 key={column.headline}
                 delay={0.1 * index}
-                className="rounded-2xl border border-white/10 bg-navy-800/60 p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-gold-500/30"
+                className="rounded-2xl border border-white/10 bg-navy-800/60 p-8 text-center transition duration-300 hover:-translate-y-1 hover:border-ice-500/30"
               >
-                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-ice-500/10 text-ice-500">
                   {Icon && <Icon size={24} aria-hidden="true" />}
                 </div>
                 <h3 className="text-xl font-semibold text-white">{column.headline}</h3>

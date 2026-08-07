@@ -66,6 +66,12 @@ export function AuthProvider({ children }) {
     return data
   }, [])
 
+  const purchasePlan = useCallback(async (plan) => {
+    const { data } = await api.post('/users/me/plan', { plan })
+    setUser(data)
+    return data
+  }, [])
+
   const value = {
     user,
     isLoading,
@@ -74,6 +80,7 @@ export function AuthProvider({ children }) {
     register,
     logout,
     updateProfile,
+    purchasePlan,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

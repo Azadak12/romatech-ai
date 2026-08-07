@@ -6,10 +6,10 @@ export default function FinalCta() {
   return (
     <section id="book-a-call" className="scroll-mt-20 py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-gold-500/20 bg-gradient-to-b from-navy-800 to-navy-900 p-8 sm:p-14">
+        <div className="relative overflow-hidden rounded-3xl border border-ice-500/20 bg-gradient-to-b from-navy-800 to-navy-900 p-8 sm:p-14">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-full bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(232,179,74,0.12),transparent)]"
+            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-full bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(56,189,248,0.12),transparent)]"
           />
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <Reveal className="lg:col-span-2">

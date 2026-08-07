@@ -41,7 +41,7 @@ export default function VoiceDemo() {
         <button
           type="button"
           onClick={togglePlayback}
-          className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-navy-950 transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-800"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-ice-500 text-navy-950 transition hover:bg-ice-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ice-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-800"
           aria-label={isPlaying ? 'Pause sample call' : 'Play sample call'}
         >
           {isPlaying ? <Pause size={26} fill="currentColor" /> : <Play size={26} fill="currentColor" className="ml-1" />}
@@ -55,7 +55,7 @@ export default function VoiceDemo() {
           {heights.map((h, i) => (
             <span
               key={i}
-              className={`w-1.5 rounded-full bg-gold-500/70 transition-all duration-300 ${
+              className={`w-1.5 rounded-full bg-ice-500/70 transition-all duration-300 ${
                 isPlaying ? 'animate-pulse' : ''
               }`}
               style={{

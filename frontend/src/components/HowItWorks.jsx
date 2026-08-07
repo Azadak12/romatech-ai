@@ -17,7 +17,7 @@ export default function HowItWorks() {
         />
         {steps.map((step, index) => (
           <Reveal key={step.headline} delay={0.1 * index} className="relative flex flex-col items-center text-center">
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold-500/40 bg-navy-900 text-lg font-bold text-gold-500">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-ice-500/40 bg-navy-900 text-lg font-bold text-ice-500">
               {index + 1}
             </div>
             <h4 className="mt-4 text-base font-semibold text-white">{step.headline}</h4>

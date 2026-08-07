@@ -9,7 +9,7 @@ export default function Problem() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
           <Reveal>
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-500">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-ice-500">
               {problem.eyebrow}
             </span>
           </Reveal>
@@ -32,9 +32,9 @@ export default function Problem() {
               <Reveal
                 key={card.headline}
                 delay={0.05 * index}
-                className="rounded-2xl border border-white/10 bg-navy-800/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-gold-500/30 hover:shadow-xl hover:shadow-black/30"
+                className="rounded-2xl border border-white/10 bg-navy-800/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-ice-500/30 hover:shadow-xl hover:shadow-black/30"
               >
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-ice-500/10 text-ice-500">
                   {Icon && <Icon size={22} aria-hidden="true" />}
                 </div>
                 <h3 className="text-lg font-semibold text-white">{card.headline}</h3>

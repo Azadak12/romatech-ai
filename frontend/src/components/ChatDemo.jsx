@@ -91,7 +91,7 @@ export default function ChatDemo() {
                 className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                   isAgent
                     ? 'bg-navy-700 text-slate-100'
-                    : 'bg-gold-500 text-navy-950'
+                    : 'bg-ice-500 text-navy-950'
                 }`}
               >
                 {message.text}
@@ -103,7 +103,7 @@ export default function ChatDemo() {
         {typingSender && <TypingBubble align={typingSender === 'agent' ? 'left' : 'right'} />}
 
         {isComplete && (
-          <p className="pt-2 text-center text-xs font-medium uppercase tracking-wider text-gold-500/80">
+          <p className="pt-2 text-center text-xs font-medium uppercase tracking-wider text-ice-500/80">
             Job booked
           </p>
         )}

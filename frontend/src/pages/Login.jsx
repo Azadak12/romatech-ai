@@ -40,7 +40,7 @@ export default function Login() {
     setSubmitError('')
     try {
       await login(form.email, form.password)
-      const destination = location.state?.from?.pathname || '/dashboard'
+      const destination = location.state?.from?.pathname || '/'
       navigate(destination, { replace: true })
     } catch (error) {
       setSubmitError(getErrorMessage(error, 'Incorrect email or password.'))
@@ -80,7 +80,7 @@ export default function Login() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition hover:bg-gold-400 disabled:cursor-not-allowed disabled:opacity-60"
+          className="flex items-center justify-center gap-2 rounded-full bg-ice-500 px-6 py-3 text-sm font-semibold text-navy-950 transition hover:bg-ice-400 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting && <Loader2 size={16} className="animate-spin" aria-hidden="true" />}
           {isSubmitting ? 'Logging in…' : 'Log In'}
@@ -89,7 +89,7 @@ export default function Login() {
 
       <p className="mt-6 text-center text-sm text-slate-400">
         Don't have an account?{' '}
-        <Link to="/register" className="font-medium text-gold-500 hover:text-gold-400">
+        <Link to="/register" className="font-medium text-ice-500 hover:text-ice-400">
           Sign up
         </Link>
       </p>

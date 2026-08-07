@@ -20,7 +20,7 @@ export default function ComparisonTable() {
               <th scope="col" className="px-6 py-4 font-semibold">
                 Doing It Manually
               </th>
-              <th scope="col" className="px-6 py-4 font-semibold text-gold-500">
+              <th scope="col" className="px-6 py-4 font-semibold text-ice-500">
                 RomaTech.Ai
               </th>
             </tr>
@@ -42,7 +42,7 @@ export default function ComparisonTable() {
                 </td>
                 <td className="px-6 py-4 text-sm font-medium text-slate-200">
                   <span className="flex items-center gap-2">
-                    <Check size={16} className="shrink-0 text-gold-500" aria-hidden="true" />
+                    <Check size={16} className="shrink-0 text-ice-500" aria-hidden="true" />
                     {row.ai}
                   </span>
                 </td>

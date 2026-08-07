@@ -66,7 +66,7 @@ export default function ProfilePanel() {
           </p>
         )}
         {savedAt && (
-          <p role="status" className="text-sm text-gold-500">
+          <p role="status" className="text-sm text-ice-500">
             Saved.
           </p>
         )}
@@ -74,7 +74,7 @@ export default function ProfilePanel() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex w-fit items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-2.5 text-sm font-semibold text-navy-950 transition hover:bg-gold-400 disabled:cursor-not-allowed disabled:opacity-60"
+          className="flex w-fit items-center justify-center gap-2 rounded-full bg-ice-500 px-6 py-2.5 text-sm font-semibold text-navy-950 transition hover:bg-ice-400 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting && <Loader2 size={16} className="animate-spin" aria-hidden="true" />}
           {isSubmitting ? 'Saving…' : 'Save Changes'}

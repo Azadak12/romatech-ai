@@ -24,3 +24,7 @@ class UserUpdate(BaseModel):
     full_name: str | None = None
     company_name: str | None = None
     phone: str | None = None
+
+
+class PlanPurchase(BaseModel):
+    plan: UserPlan

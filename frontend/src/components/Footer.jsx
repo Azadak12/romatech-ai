@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <a href="#hero" className="text-xl font-bold tracking-tighter text-white">
-            Roma<span className="text-gold-500">Tech</span>.Ai
+            Roma<span className="text-ice-500">Tech</span>.Ai
           </a>
           <p className="mt-2 max-w-xs text-sm text-slate-500">{company.tagline}</p>
         </div>

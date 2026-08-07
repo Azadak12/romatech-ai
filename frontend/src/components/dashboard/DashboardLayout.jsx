@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }) {
       <header className="border-b border-white/10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="text-lg font-bold tracking-tighter text-white">
-            Roma<span className="text-gold-500">Tech</span>.Ai
+            Roma<span className="text-ice-500">Tech</span>.Ai
           </Link>
 
           <nav className="flex items-center gap-6" aria-label="Portal">

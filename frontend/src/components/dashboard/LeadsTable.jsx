@@ -55,7 +55,7 @@ export default function LeadsTable() {
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search leads"
               aria-label="Search leads"
-              className="rounded-lg border border-white/15 bg-navy-950 py-2 pl-9 pr-3 text-sm text-white placeholder:text-slate-500 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+              className="rounded-lg border border-white/15 bg-navy-950 py-2 pl-9 pr-3 text-sm text-white placeholder:text-slate-500 focus:border-ice-500 focus:outline-none focus:ring-1 focus:ring-ice-500"
             />
           </div>
           <input
@@ -63,7 +63,7 @@ export default function LeadsTable() {
             value={dateFilter}
             onChange={(e) => setDateFilter(e.target.value)}
             aria-label="Filter leads by date"
-            className="rounded-lg border border-white/15 bg-navy-950 px-3 py-2 text-sm text-white focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+            className="rounded-lg border border-white/15 bg-navy-950 px-3 py-2 text-sm text-white focus:border-ice-500 focus:outline-none focus:ring-1 focus:ring-ice-500"
           />
         </div>
       </div>

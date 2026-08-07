@@ -20,13 +20,13 @@ function AccordionItem({ item, index, openIndex, setOpenIndex }) {
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={() => setOpenIndex(isOpen ? null : index)}
-          className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-white transition hover:text-gold-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded"
+          className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-white transition hover:text-ice-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ice-400 rounded"
         >
           {item.question}
           <ChevronDown
             size={18}
             aria-hidden="true"
-            className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-gold-500' : ''}`}
+            className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-ice-500' : ''}`}
           />
         </button>
       </h3>

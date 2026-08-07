@@ -50,9 +50,9 @@ export default function Demo() {
                 aria-controls={`panel-${tab.id}`}
                 tabIndex={activeTab === tab.id ? 0 : -1}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
+                className={`flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ice-400 ${
                   activeTab === tab.id
-                    ? 'bg-gold-500 text-navy-950'
+                    ? 'bg-ice-500 text-navy-950'
                     : 'text-slate-300 hover:text-white'
                 }`}
               >
